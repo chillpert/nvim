@@ -6,7 +6,8 @@ require 'chillpert.autocommands'
 -- Fix shell on Windows (when running nvim in Git Bash)
 -- https://www.reddit.com/r/neovim/comments/msm95e/nvim_setup_on_windows_10/
 -- vim.o.shell = '"C:\\Program Files\\Git\\bin\\bash.exe"'
-vim.cmd [[
+if vim.fn.has 'Win32' == 1 then
+  vim.cmd [[
 set shellpipe=2>&1\|tee
 if has('win32') || has('win64')
     set shell=sh
@@ -20,3 +21,4 @@ if has('win32') || has('win64')
     let g:loaded_python_provider = 1
 endif
 ]]
+end
