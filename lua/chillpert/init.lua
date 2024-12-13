@@ -1,7 +1,7 @@
 require 'chillpert.options'
 require 'chillpert.remap'
 require 'chillpert.lazy_init'
-require 'chillpert.autocmds'
+require 'chillpert.autocommands'
 
 -- Fix shell on Windows (when running nvim in Git Bash)
 -- https://www.reddit.com/r/neovim/comments/msm95e/nvim_setup_on_windows_10/
