@@ -54,15 +54,15 @@ return {
       end,
       desc = 'Debug: Step Out',
     },
-    -- {
-    --   '<leader>b',
-    --   function()
-    --     require('dap').toggle_breakpoint()
-    --   end,
-    --   desc = 'Debug: Toggle Breakpoint',
-    -- },
     {
-      '<leader>B',
+      '<F9>',
+      function()
+        require('dap').toggle_breakpoint()
+      end,
+      desc = 'Debug: Toggle Breakpoint',
+    },
+    {
+      '<F8>',
       function()
         require('dap').set_breakpoint(vim.fn.input 'Breakpoint condition: ')
       end,
