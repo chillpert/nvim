@@ -12,4 +12,3 @@ require('lazy').setup {
   spec = 'chillpert.lazy',
   change_detection = { notify = false },
 }
-

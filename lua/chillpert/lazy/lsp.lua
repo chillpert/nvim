@@ -3,6 +3,7 @@ return {
     -- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
     -- used for completion, annotations and signatures of Neovim apis
     'folke/lazydev.nvim',
+    cond = not vim.g.vscode,
     ft = 'lua',
     opts = {
       library = {
@@ -11,10 +12,11 @@ return {
       },
     },
   },
-  { 'Bilal2453/luvit-meta', lazy = true },
+  { 'Bilal2453/luvit-meta', cond = not vim.g.vscode, lazy = true },
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
+    cond = not vim.g.vscode,
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       ---@diagnostic disable-next-line: missing-fields
@@ -288,6 +290,7 @@ return {
   },
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
+    cond = not vim.g.vscode,
     event = 'InsertEnter',
     dependencies = {
       -- Snippet Engine & its associated nvim-cmp source
@@ -425,6 +428,7 @@ return {
   },
   {
     'Exafunction/codeium.nvim',
+    cond = not vim.g.vscode,
     dependencies = {
       'nvim-lua/plenary.nvim',
       'hrsh7th/nvim-cmp',
@@ -475,6 +479,7 @@ return {
   },
   {
     'p00f/clangd_extensions.nvim',
+    cond = not vim.g.vscode,
     dependencies = { 'mortepau/codicons.nvim' },
     lazy = true,
     config = function() end,
@@ -506,6 +511,7 @@ return {
   },
   {
     'hedyhli/outline.nvim',
+    cond = not vim.g.vscode,
     enabled = false,
     config = function()
       -- Example mapping to toggle outline

@@ -3,6 +3,7 @@ return {
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
     'Mofiqul/vscode.nvim',
+    cond = not vim.g.vscode,
     enabled = true,
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()

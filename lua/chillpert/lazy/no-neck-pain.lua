@@ -2,6 +2,7 @@ return {
   {
     'shortcuts/no-neck-pain.nvim',
     enabled = true,
+    cond = not vim.g.vscode,
     config = function()
       require('no-neck-pain').setup {
         width = 150,

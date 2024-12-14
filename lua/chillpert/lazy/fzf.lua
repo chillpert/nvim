@@ -1,6 +1,7 @@
 return {
   {
     'ibhagwan/fzf-lua',
+    cond = not vim.g.vscode,
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
       -- This allows certain windows to use fzf-lua, specifically Ctrl-f in Mason

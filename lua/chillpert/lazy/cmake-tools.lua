@@ -4,6 +4,7 @@ return {
     dependencies = {
       'nvim-lua/plenary.nvim',
     },
+    cond = not vim.g.vscode,
     config = function()
       require('cmake-tools').setup {
         cmake_runner = { -- runner to use
