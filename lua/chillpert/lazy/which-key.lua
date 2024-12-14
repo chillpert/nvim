@@ -52,6 +52,7 @@ return {
         { '<leader>f', group = '[f]ind' },
         { '<leader>t', group = '[t]oggle' },
         { '<leader>g', group = '[g]rep' },
+        { '<leader>c', group = '[c]ode' },
         { '<leader>h', group = '[h]istory' },
         { '<leader>G', group = '[G]it hunk', mode = { 'n', 'v' } },
       },
