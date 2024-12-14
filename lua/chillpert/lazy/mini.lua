@@ -8,6 +8,7 @@ return {
       require('mini.statusline').setup()
       -- require('mini.notify').setup()
       require('mini.icons').setup()
+      require('mini.surround').setup()
     end,
   },
 }
